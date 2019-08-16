@@ -1,0 +1,32 @@
+<!-- add.wxml -->
+<!-- 搜索 -->
+<view class="search-box">
+    <i-icon type="search" size="26" color="#bbb" i-class="i-float" /> 
+    <input type="text" placeholder="搜索" class="search" /> 
+</view>
+<!-- 设备选择 -->
+<view class="equipment-box">
+    <!-- 设备类型 -->
+    <view class="bar-box">
+        <view wx:for="{{equipmentType}}" wx:key="key">
+            <view wx:if="{{item == indexeq}}">
+                <view class="eq-type active">{{item}}</view>
+            </view>
+            <view wx:elif="{{item}}">
+                <view class="eq-type" bindtap="setIndex" data-eq="{{item}}">{{item}}</view>
+            </view>  
+        </view>
+    </view>
+    <!-- 设备浏览 -->
+    <view class="eq-box">
+        <i-divider content="{{indexeq}}" color="#111" line-color="#ddd"></i-divider>
+        <view wx:for="{{equipments}}" wx:key="key">
+            <view wx:if="{{indexeq == item.type}}">
+                <view class="eq" bindtap="toConnect" data-eqdata="{{item}}">
+                    <image src="{{item.path}}" />
+                    <view>{{item.eqName}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

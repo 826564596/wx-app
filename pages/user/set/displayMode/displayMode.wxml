@@ -1,0 +1,12 @@
+<!-- displayMode.wxml -->
+<i-panel>
+    <i-radio-group current="{{current}}" bindchange="handleModeChange">
+        <i-radio
+            wx:for="{{mode}}"
+            position="right"
+            wx:key="key"
+            value="{{item}}"
+        >
+        </i-radio>
+    </i-radio-group>
+</i-panel>

@@ -1,0 +1,43 @@
+<!--
+    <view>
+        <button
+            catchtouchstart="startRecord"
+            catchtouchend="stopRecord"
+            type="primary"
+        >按住录音</button>
+    </view>
+-->
+<view class="container" bindlongpress="toVoice">
+  <view> 
+    <i-button bindtap="testSend" type="primary">播放录音</i-button> 
+  </view>
+  <i-toast id="toast" />
+  <i-message id="message" />
+  <!-- <view hidden="{{hidden}}">
+      <i-action-sheet visible="{{ visible1 }}" actions="{{ action }}" show-cancel bind:cancel="handleCancel1" bind:click="handleClickItem1">
+        <view slot = "header" style="padding: 16px">
+          <i-checkbox-group current="{{current}}" bindchange="handleDeviceChange">
+            <i-checkbox wx:for="{{device}}"  position="{{position}}" wx:key="{{item.id}}" value="{{item.id}}" name="{{item.name}}" disabled="{{!item.status}}" position="left">
+            </i-checkbox>
+          </i-checkbox-group>
+        </view>
+      </i-action-sheet>
+    <i-button bindtap="handleClick" type="">确定</i-button>
+  </view> -->
+  <i-button bind:click="handleOpen1">普通对话框</i-button>
+  <i-modal title="选择" visible="{{ visible2 }}" bind:ok="handleOK" bind:cancel="handleCancel">
+    <i-checkbox-group current="{{current}}" bindchange="handleDeviceChange">
+      <i-checkbox wx:for="{{device}}"  position="{{position}}" wx:key="{{item.id}}" value="{{item.id}}" name="{{item.name}}" disabled="{{!item.status}}" position="left">
+     {{item.name}}</i-checkbox>
+    </i-checkbox-group>
+  </i-modal>
+
+
+  <view
+        class="note-btn"
+        bindtouchstart="startRecord"
+        bindtouchend="stopRecord"
+    >
+        <image src="./voice.png" width="64rpx" width="64rpx"></image>
+  </view>
+</view>

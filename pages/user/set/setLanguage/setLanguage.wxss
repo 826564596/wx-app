@@ -1,0 +1,4 @@
+/* setLanguage.wxss */
+.select {
+    color: rgb(37, 197, 37);
+}

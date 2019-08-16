@@ -1,0 +1,30 @@
+<!-- smart.wxml -->
+<view>
+    <i-tabs current="{{ current }}" bindchange="handleChange">
+        <i-tab key="tab1" title="推荐"></i-tab>
+        <i-tab key="tab2" title="我的"></i-tab>
+        <i-tab key="tab3" title="日志"></i-tab>
+    </i-tabs>
+</view>
+<view wx:if="{{current === 'tab1'}}">
+    <view>
+        <text class="text part-one">智能家居玩法攻略</text>
+        <text class="text part-two">日落时通知我</text>
+        <text class="text part-three">离家</text>
+
+        <image
+            class="image"
+            src="http://file.elecfans.com/web1/M00/6B/49/o4YBAFvftyeAbu-uAAGUk8zg7M0342.png"
+        ></image>
+        <image
+            class="image"
+            src="http://img1.imgtn.bdimg.com/it/u=2025665648,3387918315&fm=200&gp=0.jpg"
+        ></image>
+        <image
+            class="image"
+            src="http://img1.imgtn.bdimg.com/it/u=627879711,1247320587&fm=214&gp=0.jpg"
+        ></image>
+    </view>
+</view>
+<view wx:if="{{current === 'tab2'}}"> <view> 我的模式 </view> </view>
+<view wx:if="{{current === 'tab3'}}"> <view> 查看日志 </view> </view>

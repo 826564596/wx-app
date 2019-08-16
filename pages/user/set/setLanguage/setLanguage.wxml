@@ -1,0 +1,18 @@
+<!-- setLanguage.wxml -->
+<i-cell-group wx:for="{{languages}}" wx:key="key">
+    <view wx:if="{{selected == item}}">
+        <i-cell
+            title="{{item}}"
+            i-class="select"
+            bindtap="change"
+            data-language="{{item}}"
+        ></i-cell>
+    </view>
+    <view wx:elif="{{selected}}">
+        <i-cell
+            title="{{item}}"
+            bindtap="change"
+            data-language="{{item}}"
+        ></i-cell>
+    </view>
+</i-cell-group>

@@ -1,0 +1,32 @@
+<!-- set.wxml -->
+<view class="set-title">首页</view>
+<i-cell-group>
+    <i-cell title="快捷开关音效" >
+        <switch slot="footer" color="skyblue" checked/>
+    </i-cell>
+    <i-cell title="显示模式" bindtap="switchMode" value="{{viewMode}}" data-mode="{{viewMode}}" is-link></i-cell>
+    <i-cell title="快捷操作卡片">
+        <switch slot="footer" color="skyblue"/>
+    </i-cell>
+    <i-cell title="家庭房间管理" bindtap="roomManage" is-link></i-cell>
+</i-cell-group>
+<view class="set-title">设备</view>
+<i-cell-group>
+    <i-cell title="自动发现设备" label="{{text1}}">
+            <switch slot="footer" color="skyblue"/>
+    </i-cell>
+    <i-cell title="一键添加" label="{{text2}}">
+            <switch slot="footer" color="skyblue" checked/>
+    </i-cell>
+    <i-cell title="通知栏快捷开关" is-link></i-cell>
+    <i-cell title="语言设备授权管理" is-link></i-cell>
+    <i-cell title="消息设置" is-link bindtap="msgset"></i-cell>
+    <i-cell title="实验室功能" is-link></i-cell>
+</i-cell-group>
+<view class="set-title">地区与语言</view>
+<i-cell-group>
+    <i-cell title="地区" bindtap="region" value="大陆地区" is-link></i-cell>
+    <i-cell title="语言" bindtap="setLanguage" value="默认" is-link></i-cell>
+</i-cell-group>
+
+<button class="exit" bindtap="exit">退出小程序</button>

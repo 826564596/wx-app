@@ -1,0 +1,25 @@
+<!-- msgset.wxml -->
+<view class="text">系统推送</view>
+<i-cell-group>
+    <i-cell title="设备通知">
+        <switch slot="footer" checked/>
+    </i-cell>
+    <i-cell title="设备共享">
+        <switch slot="footer" checked/>
+    </i-cell>
+    <i-cell title="家人邀请">
+        <switch slot="footer" checked/>
+    </i-cell>
+    <i-cell title="商城消息">
+        <switch slot="footer" checked/>
+    </i-cell>
+</i-cell-group>
+<view class="text">免打扰</view>
+<i-cell-group>
+    <i-cell title="消息免打扰">
+        <switch slot="footer" bindchange="change" data-checkdata="checked" />
+    </i-cell>
+    <view wx:if="{{checked == true}}">
+        <i-cell title="免打扰时段" value="23:00~7:00"></i-cell>
+    </view>
+</i-cell-group>

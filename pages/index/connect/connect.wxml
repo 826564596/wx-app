@@ -1,0 +1,24 @@
+<!-- connect.wxml -->
+<view class="box">
+    <image src="{{eq.path}}" />
+</view>
+<view class="top1" wx:if="{{index == 'top1'}}">
+    <view class="null-box"></view>
+    <view>接通电源，确认设备处于连接状态</view>
+    <view class="color1">指示灯处于其他状态</view>
+    <view class="null-box"></view>
+    <view class="null-box"></view>
+    <radio color="#17c417" checked>指示灯闪烁中</radio>
+    <view class="min-box"></view>
+    <button class="next1" bindtap="next">下一步</button>
+</view>
+<view class="top2" wx:if="{{index == 'top2'}}">
+    <view class="null-box"></view>
+    <view class="wf-box">
+        <i-cell title="选择连接WIFI" value="无" is-link></i-cell>
+    </view>
+    <view class="null-box"></view>
+    <view class="null-box"></view>
+    <view class="null-box"></view>
+    <button class="next1" bindtap="nextTop" >下一步</button>
+</view>

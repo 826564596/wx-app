@@ -1,0 +1,26 @@
+<!-- roomManage.wxml -->
+<i-cell-group>
+    <i-cell
+        title="家庭名称"
+        value="{{familyInfo.name}}"
+        bindtap="changeName"
+        is-link
+    ></i-cell>
+    <i-cell title="家庭位置" value="{{familyInfo.address}}" is-link></i-cell>
+    <i-cell title="全部设备数量" value="0个设备"></i-cell>
+    <view class="null-box"></view>
+    <i-cell title="房间管理" is-link></i-cell>
+</i-cell-group>
+<i-modal
+    title="设置家庭名称"
+    visible="{{ visible }}"
+    bind:ok="handleClose1"
+    bind:cancel="handleClose2"
+>
+    <input
+        type="text"
+        class="name"
+        value="{{familyInfo.name}}"
+        bindinput="getName"
+    />
+</i-modal>

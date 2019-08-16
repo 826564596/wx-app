@@ -1,0 +1,14 @@
+/* share.wxss */
+Page {
+    width: 100%;
+    height: 100%;
+}
+.null {
+    margin: 100px 85px;
+    width: 100%;
+    height: 100%;
+}
+.null > image {
+    width: 150px;
+    height: 150px;
+}

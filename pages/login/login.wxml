@@ -1,0 +1,48 @@
+<!-- pages/login/login.wxml -->
+
+<!-- 背景 -->
+<!-- <view class="bg"> <image src="../../images/background.jpeg" /> </view> -->
+<view class="wrap">
+    <text class="title">开启智慧生活</text>
+    <!--
+        <i-panel title="登录">
+            <i-input  autofocus i-class='login'  type="text"  name='userName'  placeholder="请输入登录邮箱" bind:change="login" />
+            <i-input autofocus i-class='login'  type="password" name="password"   placeholder="请输入登录密码" bind:change="login"/>
+        </i-panel>
+    -->
+
+    <input
+        type="text"
+        class="login"
+        placeholder="请输入邮箱"
+        bindblur="getuserName"
+        value="{{userName}}"
+    />
+    <input
+        type="password"
+        class="login"
+        placeholder="请输入密码"
+        bindblur="getPassword"
+        value="{{password}}"
+    />
+
+    <!--
+        <i-radio i-class='keepMeLoggedIn' color="#006eff" checked  value="记录登录信息" bindchange="handleAnimalChange"></i-radio>
+    -->
+    <i-button
+        type="primary"
+        shape="circle"
+        size="large"
+        i-class="btn"
+        bind:click="login"
+        >登录</i-button
+    >
+    <i-button
+        type="primary"
+        shape="circle"
+        size="large"
+        i-class="btn"
+        bind:click="register"
+        >注册</i-button
+    >
+</view>

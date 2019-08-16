@@ -1,0 +1,69 @@
+<!-- index.wxml -->
+<view class="all" bindtap="myClick">
+<!-- 背景 -->
+<view class="bg"> <image src="../../images/background.jpeg" /> </view>
+<!-- 用户 -->
+<view class="baseIm">
+    <view class="home"><i-icon type="homepage" color="#666" size="28"/>{{familyInfo.name}}</view>
+    <i-icon type="add" size="20" color="#fff" class="add" bindtap="toAdd" />
+    <!-- 天气信息 -->
+    <view class="tcolor">
+        <view class="temptxt">{{weatherData.temperature}}</view><!-- 气温 -->
+        <view class="addresstxt">{{weatherData.currentCity}}·{{cityInfo.district}}</view>  <!-- 地址 -->
+        <view class="weathertxt">
+            {{weatherData.weatherDesc}}
+            <image class="weathertxt-Desc" wx:if="{{weatherData.weatherDesc==='多云'}}" src="../../images/weatherImage/duoyun.png"></image>
+            <image class="weathertxt-Desc" wx:if="{{weatherData.weatherDesc==='大雨'}}" src="../../images/weatherImage/dayu.png"></image>
+            <image class="weathertxt-Desc" wx:if="{{weatherData.weatherDesc==='晴'}}" src="../../images/weatherImage/qing.png"></image>
+            <image class="weathertxt-Desc" wx:if="{{weatherData.weatherDesc==='阴'}}" src="../../images/weatherImage/tianqi-yin.png"></image>
+            <image class="weathertxt-Desc" wx:if="{{weatherData.weatherDesc==='小雨'}}" src="../../images/weatherImage/xiaoyu.png"></image>
+            <image class="weathertxt-Desc" wx:if="{{weatherData.weatherDesc==='雪'}}" src="../../images/weatherImage/xue.png"></image>
+            <!-- <image class="weathertxt-Desc" wx:if="{{weatherData.weatherDesc==='多云'}}" src="../../images/weatherImage/duoyun.png"></image> -->
+
+            
+            
+        </view>
+        <view class="imfo">
+            <text> PM2.5 ~ {{weatherData.pm25}}</text><text>风向 ~ {{weatherData.wind}} </text> <!-- 空气|水质|湿度 -->
+        </view>
+    </view>
+</view>
+<!-- 设备栏 -->
+<view class="equipment">
+    <!-- 设备导航栏 -->
+    <view class="bar-equipment">
+        <view class="icon"><i-icon type="createtask_fill" size="32" color="#999" /></view>
+        <view class="line"></view>
+        <!-- 滑动导航 -->
+        <view class="bar-box">
+            <view class="icon-bar">
+                <i-icon type="live" size="32" color="#666" i-class="icons" />
+                <i-icon type="lock" size="32" color="#666" i-class="icons" />
+                <i-icon type="flag" size="32" color="#666" i-class="icons" />
+                <i-icon type="emoji" size="32" color="#666" i-class="icons" />
+                <i-icon type="coupons" size="32" color="#666" i-class="icons" />
+                <i-icon type="computer" size="32" color="#666" i-class="icons" />
+                <i-icon type="browse" size="32" color="#666" i-class="icons" />
+                <i-icon type="live" size="32" color="#666" i-class="icons" />
+                <i-icon type="camera" size="32" color="#666" i-class="icons" />
+                <i-icon type="brush" size="32" color="#666" i-class="icons" />       
+            </view>
+        </view>
+    </view>
+    <!-- 设备显示栏 -->
+    <view class="box-equipment">
+        <view wx:if="{{equipments === null}}">
+            <view class="add-box" bindtap="toAdd">+ 添加设备</view>
+        </view>
+        <view wx:if="{{equipments}}" wx:for="{{equipments}}"  wx:key="key">
+            <view class="add-box" bindtap="toEq" data-model="{{item.model}}">
+                <image src="../../images/XMImage/{{item.model}}.png"/>
+                <text wx:if="{{item.name.length>5}}">{{item.name}}</text>
+                <!-- <text wx:elif="{{item.name.length<5}}">{{item.name}}</text> -->
+                <view wx:if="{{item.state == 'open'}}" class="open"></view>
+                <view wx:if="{{item.state == 'close'}}" class="close"></view>
+            </view>
+        </view>
+    </view>
+</view>
+</view>

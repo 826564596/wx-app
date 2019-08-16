@@ -1,0 +1,8 @@
+{
+    "navigationBarTitleText": "显示模式",
+    "disableScroll": true,
+    "usingComponents": {
+        "i-radio-group": "../../../../dist/radio-group/index",
+        "i-radio": "../../../../dist/radio/index"
+    }
+}

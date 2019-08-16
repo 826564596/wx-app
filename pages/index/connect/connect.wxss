@@ -1,0 +1,41 @@
+/* connect.wxss */
+.box {
+    width: 100%;
+    height: 40%;
+    margin: 20px auto;
+    text-align: center;
+}
+.box > image {
+    width: 56vw;
+    height: 60vw;
+}
+.top1 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 30px;
+}
+.null-box {
+    width: 100%;
+    height: 20px;
+}
+.color1 {
+    color: rgb(7, 99, 204);
+}
+.next1 {
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #eee;
+    color: #999;
+}
+.min-box {
+    width: 100%;
+    height: 5px;
+}
+.wf-box {
+    width: 80%;
+    margin-left: 10%;
+}

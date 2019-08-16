@@ -1,0 +1,61 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/voice/voice",
+    "pages/smart/smart",
+    "pages/user/user",
+    "pages/index/add/add",
+    "pages/index/connect/connect",
+    "pages/index/setdata/setdata",
+    "pages/index/equipment/equipment",
+    "pages/user/set/set",
+    "pages/user/set/displayMode/displayMode",
+    "pages/user/set/roomManage/roomManage",
+    "pages/user/set/msgset/msgset",
+    "pages/user/set/region/region",
+    "pages/user/set/setLanguage/setLanguage",
+    "pages/user/share/share",
+    "pages/user/WIFI/WIFI",
+    "pages/user/message/message",
+    "pages/register/register"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "语音识别",
+    "navigationBarTextStyle": "black"
+  },
+  "plugins": {
+    "WechatSI": {
+      "version": "0.2.2",
+      "provider": "wx069ba97219f66d99"
+    }
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首 页",
+        "iconPath": "./images/shouye.png",
+        "selectedIconPath": "./images/shouye2.png"
+      },
+      {
+        "pagePath": "pages/smart/smart",
+        "text": "智 能",
+        "iconPath": "./images/xiaomishexiangtou.png",
+        "selectedIconPath": "./images/xiaomishexiangtou2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我 的",
+        "iconPath": "./images/personnone.png",
+        "selectedIconPath": "./images/personnone2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

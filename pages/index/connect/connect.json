@@ -1,0 +1,7 @@
+{
+    "navigationBarTitleText": "连接设备",
+    "disableScroll": true,
+    "usingComponents": {
+        "i-cell": "../../../dist/cell/index"
+    }
+}

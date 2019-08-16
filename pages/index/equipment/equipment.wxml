@@ -1,0 +1,16 @@
+<!-- equipment.wxml -->
+<view wx:if="{{equipment}}" class="XMD">
+    <image src="../../../images/XMImage/{{equipment.model}}.png" />
+    <i-cell-group>
+        <i-cell title="设备" value="{{equipment.name}}"></i-cell>
+        <i-cell title="型号" value="{{equipment.model}}"></i-cell>
+        <i-cell title="位置" value="{{equipment.position}}"></i-cell>
+        <i-cell title="电源">
+            <switch slot="footer" bindchange="change" checked="{{power}}"/>
+        </i-cell>
+        <view wx:if="{{equipment.model == 'XMCGQ002' && power == true}}">
+            <i-cell title="温度" value="{{equipment.data.temp}}"></i-cell>
+            <i-cell title="湿度" value="{{equipment.data.humi}}"></i-cell>
+        </view>
+    </i-cell-group>
+</view>

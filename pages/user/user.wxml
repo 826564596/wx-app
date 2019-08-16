@@ -1,0 +1,62 @@
+<!-- user.wxml -->
+<view class="userIm">
+    <i-badge i-class="mail">
+        <i-icon type="mail" bindtap="message" size="28" color="#80848f" />
+    </i-badge>
+    <view class="userName">{{userInfo.nickName}}</view>
+    <view class="userE">0个智能设备</view>
+    <image src="{{userInfo.avatarUrl}}" class="userImg" />
+</view>
+<view class="userBar">
+    <i-grid>
+        <i-grid-item bindtap="toShare">
+            <i-grid-icon>
+                <i-icon type="share" size="32" />
+            </i-grid-icon>
+            <i-grid-label>设备共享</i-grid-label>
+        </i-grid-item>
+        <i-grid-item bindtap="toWIFI">
+            <i-grid-icon>
+                <i-icon type="scan" size="32" />
+            </i-grid-icon>
+            <i-grid-label>WIFI管理</i-grid-label>
+        </i-grid-item>
+        <i-grid-item>
+            <i-grid-icon>
+                <i-icon type="feedback" size="32" />
+            </i-grid-icon>
+            <i-grid-label>设备百科</i-grid-label>
+        </i-grid-item>
+    </i-grid>
+</view>
+<view class="userList">
+    <i-cell-group>
+        <i-cell title="我的有品" is-link="true">
+            <view slot="icon">
+                <i-icon type="publishgoods_fill" size="24"></i-icon>
+            </view>
+        </i-cell>
+        <i-cell title="语音模式" is-link bindtap="voice">
+            <view slot="icon">
+                <i-icon type="translation" size="24" ></i-icon>
+            </view>
+        </i-cell>
+        <i-cell title="咨讯" is-link>
+            <view slot="icon">
+                <i-icon type="message" size="24"></i-icon>
+            </view>
+        </i-cell>
+        <i-cell title="帮助反馈" is-link>
+            <view slot="icon">
+               <i-icon type="barrage" size="24"></i-icon>
+            </view>
+        </i-cell>
+        <i-cell title="设置" is-link="true" url="set/set" >
+            <view slot="icon">
+                <i-icon type="setup" size="24"></i-icon>
+            </view>
+        </i-cell>
+      
+    </i-cell-group>
+
+</view>

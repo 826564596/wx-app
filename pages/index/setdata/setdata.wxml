@@ -1,0 +1,14 @@
+<!-- setdata.wxml -->
+<view class="eq">
+    <image src="{{equipment.path}}" />
+    <view>{{equipment.eqName}}</view>
+</view>
+<view class="set-box">
+    <i-cell-group>
+        <i-cell title="设备位置" value="默认房间" is-link></i-cell>
+        <i-cell title="分享设备" value="无" is-link></i-cell>
+    </i-cell-group>
+</view>
+<view class="null-box"></view>
+<view class="null-box"></view>
+<button class="ok">完成</button>

@@ -1,0 +1,19 @@
+<!-- region.wxml -->
+<view class="text">请选择您要使用的地区</view>
+<i-cell-group wx:for="{{regions}}" wx:key="key">
+    <view wx:if="{{selected == item}}">
+        <i-cell
+            title="> {{item}}"
+            i-class="select"
+            bindtap="change"
+            data-region="{{item}}"
+        ></i-cell>
+    </view>
+    <view wx:elif="{{selected}}">
+        <i-cell
+            title="{{item}}"
+            bindtap="change"
+            data-region="{{item}}"
+        ></i-cell>
+    </view>
+</i-cell-group>
